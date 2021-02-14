@@ -1,0 +1,209 @@
+/* Medium devices (tablets, 768px and up) */
+@media only screen and (max-width: 992px) {
+    
+
+    /* PRELOADER */
+
+    #loader-wrapper img {
+        width: 25vh;
+    }
+
+    /* INVITE MESSAGE */
+    
+    .letter {
+        height: 100vh;
+        padding: 0 10%;
+        font-size: 24px;
+    }
+
+    #open {
+        font-size: 24px;
+        padding: 10px 30px;
+        margin: 30px;
+    }
+    
+    .names {
+        font-size: 38px;
+    }
+    
+    /* COVER */
+    
+    .cover {
+        font-size: 36px;
+    }
+
+    .cover-couple {
+        font-size: 74px;
+    }
+
+    /* COUPLE */
+
+    .couple {
+        font-size: 22px;
+    }
+
+    .couple-title {
+        font-size: 44px;
+    }
+
+    .first {
+        font-size: 60px;
+    }
+    
+    .last {
+        font-size: 48px;
+    }
+
+    .socialmedia>a {
+        font-size: 32px;
+    }
+
+    .and>span {
+        font-size: 56px;
+    }
+
+    /* SAVE DATE */
+
+    .dDay {
+        font-size: 24px;
+    }
+
+    .words {
+        font-size: 24px;
+    }
+
+    .saveDate {
+        font-size: 30px;
+    }
+
+    .card-title {
+        font-size: 56px;
+        margin-top: 5px;
+    }
+
+    .list-group-flush {
+        padding: 0 5px;
+    }
+
+    /*---COUNTDOWN */
+
+    .count-title {
+        font-size: 64px;
+        line-height: 1;
+    }
+
+    .count-box {
+        width: 10vh;
+        height: 10vh;
+        margin: 5px;
+        padding: 2vh 1vh;
+    
+        font-size: 32px;
+        line-height: 0.8;
+    }
+
+    .ctime {
+        font-size: 18px;
+    }
+
+    /* HEALTH */
+
+    .health {
+        font-size: 13px;
+    }
+
+    .health-card .card-title {
+        font-size: 28px;
+        padding: 5px;
+        word-wrap: none;
+    }
+
+    .health-card .card-title img {
+        width: 30px;
+    }
+
+    .list-group-horizontal .card-icon {
+        padding: 5px 0;
+    }
+
+    .list-group-horizontal .card-icon img {
+        width: 40%;
+    }
+    
+    .list-group-horizontal .card-icon-desc {
+        padding: 5px 0;
+    }
+
+    .card-footer {
+        font-size: 10px;
+    }
+
+    /* LOCATION */
+
+    .location-title {
+        font-size: 64px;
+    }
+
+    .alert {
+        font-size: 10px;
+    }
+
+    /* GALLERY */
+
+    .gallery-title {
+        font-size: 64px;
+    }
+
+    /* PRAY */
+
+    .pray {
+        font-size: 64px;
+    }
+
+    .surah {
+        font-size: 24px;
+    }
+
+    /* THANK YOU */
+
+    .thank-you {
+        font-size: 24px;
+        padding: 10vh 2vh;
+    }
+
+    /* FOOTER */
+    
+    footer {
+        padding: 5vh 10vh;
+    }
+
+    footer img {
+        padding: 5px;
+    }
+
+    /*  COSTUMIZE */
+
+    .column {
+        padding: 5vh;
+    }
+
+    .card {
+        border-radius: 20px;
+    }
+
+    /* CUSTOM SIDEBAR NAV */
+
+    .hover-navbar {
+        width: 80px;
+        top: 3vh;
+    }
+
+    .list-group-item-action {
+        font-size: 12px;
+    }
+
+}
+
+/* X-Large devices (large desktops, 1200px and bellow) */
+@media only screen and (max-width: 1200px) {
+}
