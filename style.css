@@ -215,18 +215,6 @@ body {
     font-style: normal;
 }
 
-.icon-sm {
-    font-family: 'Socialmedia';
-}
-
-.icon-sp {
-    font-family: 'Support';
-}
-
-.icon-wd {
-    font-family: 'Wedding';
-}
-
 div.and {
     display: flex;
     justify-content: center;
@@ -275,7 +263,7 @@ div.and {
 }
 
 .akad-card, .resepsi-card {
-    background-color: #FFF;
+    background-color: #FFFEFC;
     border-right: 10px solid #826E52;
     border-bottom: 10px solid #826E52;
 }
@@ -301,6 +289,7 @@ div.and {
     border: 0;
     margin: 0;
     padding: 0;
+    background-color: #FFFFFF00;
 }
 
 .list-group-flush {
@@ -337,7 +326,7 @@ div.and {
 }
 
 .count-box {
-    background-color: #FFF;
+    background-color: #FFFEFC;
     width: 15vh;
     height: 15vh;
     margin: 10px;
@@ -354,6 +343,23 @@ div.and {
 .ctime {
     display: block;
     font-size: 20px;
+}
+
+/*---DESSCODE */
+
+.dress-code {
+    color: #FFECCB;
+}
+
+.dress-name {
+    width: 50%;
+    padding: 20px;
+    margin: 0 auto;
+    border-radius: 10px;
+    background-color: #FFFEFC;
+    color: #826E52;
+    text-align: center;
+    font-size: 52px;
 }
 
 /* HEALTH */
@@ -438,15 +444,8 @@ div.and {
     padding: 10vh 0;
 }
 
-.location-title {
+.location .row-title {
     color: #FFECCB;
-}
-
-.row-title {    
-    font-family: 'Damion';
-    font-size: 92px;
-    text-align: center;
-    text-shadow: 2px 3px #45454584;
 }
 
 .loc-hr {
@@ -485,12 +484,12 @@ div.and {
 
 /* PRAY */
 
-.pray-title {
+.pray .row-title {
     color: #826E52;
 }
 
 .surah {
-    background-color: #FFF;
+    background-color: #FFFEFC;
     color: #826E52;
     font-family: 'Rancho';
     font-size: 32px;
@@ -551,7 +550,7 @@ div.and {
 }
 
 .wish-card {
-    background-color: #FFF;
+    background-color: #FFFEFC;
     color: #826E52;
 }
 
@@ -604,19 +603,38 @@ div.and {
     border-radius: 20px;
 }
 
+.row-title {    
+    font-family: 'Damion';
+    font-size: 92px;
+    text-align: center;
+    text-shadow: 2px 3px #45454584;
+}
+
+.icon-sm {
+    font-family: 'Socialmedia';
+}
+
+.icon-sp {
+    font-family: 'Support';
+}
+
+.icon-wd {
+    font-family: 'Wedding';
+}
+
 /* CUSTOM BUTTON */
 
 .btn-saveDate {
     background-color: rgba(0, 0, 0, 0);
-    color: #FFECCB;
-    border: 5px solid #FFECCB;
+    color: #FFFEFC;
+    border: 5px solid #FFFEFC;
     border-radius: 10px;
     padding: 10px 20px;
     transition: 500ms;
 }
 
 .btn-saveDate:hover {
-    background-color: #FFECCB;
+    background-color: #FFFEFC;
     color: #826E52;
     transform: scale(1.05);
     -webkit-transform: scale(1.05);
@@ -627,7 +645,7 @@ div.and {
 }
 
 .btn-rusty {
-    background-color: #FFF;
+    background-color: #FFFEFC;
     border: 2px solid black;
     border-radius: 10px;
 }
@@ -684,16 +702,16 @@ div.and {
 
 .list-group-item-action, .list-group-item-action:focus, .list-group-item-action:active {
     background-color: #9f805976;
-    color: #FFF;
+    color: #FFFEFC;
     text-align: right;
     border: 0;
-    color: #FFF;
+    color: #FFFEFC;
     transition: 500ms;
 }
 
 .list-group-item-action:hover {
     background-color: #826E52;
-    color: #FFF;
+    color: #FFFEFC;
     text-align: left;
     transition: 500ms;
 }
@@ -709,7 +727,7 @@ div.and {
 .hp-menu {
     background-color: #00b87876;
     width: inherit;
-    color: #FFF;
+    color: #FFFEFC;
     padding: .5rem 0;
     padding-right: 1rem;
     word-wrap: break-word;
@@ -717,7 +735,7 @@ div.and {
 
 .hp-menu:hover {
     background-color: #00b878;
-    color: #FFF;
+    color: #FFFEFC;
     padding: .5rem 0;
     padding-left: 1rem;
 }
