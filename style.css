@@ -125,7 +125,7 @@ body {
 /* COVER */
 
 .cover {
-    background-image: url('src/img/HH_Cover.JPG');
+    background-image: url('src/img/HH_Cover.png');
     background-color: #826E52;
     background-blend-mode: multiply;
     background-repeat: no-repeat;
@@ -136,15 +136,26 @@ body {
     display: flex;
     justify-content: space-between;
     font-family: 'Mist';
-    font-size: 48px;
+    font-size: 40px;
     color: #FFECCB;
     text-shadow: 2px 3px #454545;
-    height: 120vh;
+    height: 110vh;
 }
 
 .cover-couple {
     font-size: 82px;
     line-height: 1;
+}
+
+.cover>.column {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 1s;
+}
+
+.show-cover>.column {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* COUPLE */
@@ -711,25 +722,29 @@ div.and {
 .hover-navbar {
     font-family: 'Quicksand';
     position: fixed;
-    width: 100px;
+    width: 200px;
     top: 10vh;
-    right: 0;
+    right: -100px;
     z-index: 2;
+    font-size: 16px;
 }
 
 .list-group-item-action, .list-group-item-action:focus, .list-group-item-action:active {
-    background-color: #9f805976;
+    background-color: #9f805900;
     color: #FFFEFC;
-    text-align: right;
+    text-align: left;
+    padding-left: 100px;
     border: 0;
     color: #FFFEFC;
-    transition: background-color 500ms, color 500ms;
+    transition: background-color .5s, color .5s, padding .5s;
 }
 
 .list-group-item-action:hover {
     background-color: #826E52;
     color: #FFFEFC;
     text-align: left;
+    padding-left: 20px;
+    transition: background-color .5s, color .5s, padding .5s;
 }
 
 .list-group-item.active {
@@ -737,30 +752,28 @@ div.and {
     color: #826E52;
     border-left: 0.5rem solid #826E52;
     text-align: left;
-    transition: background-color 500ms, color 500ms;
+    padding-left: 20px;
+    transition: background-color .5s, color .5s, padding .5s;
 }
 
 .hp-menu {
-    background-color: #00b87876;
+    background-color: #00b87800;
     color: #FFFEFC;
     width: inherit;
-    padding: .5rem 0;
-    padding-right: 1rem;
     word-wrap: break-word;
 }
 
 .hp-menu:hover {
     background-color: #00b878;
     color: #FFFEFC;
-    padding: .5rem 0;
-    padding-left: 1rem;
+    padding-right: 100px;
 }
 
 .hp-menu.active {
     background-color: #82ffc9;
     color: #00af63;
-    padding: .5rem 0;
-    padding-left: 0.5rem;
+    padding-left: 10px;
+    padding-right: 100px;
     border-left: 0.5rem solid #00af63;
 }
 
@@ -779,6 +792,11 @@ div.and {
 /*---AUDIO */
 
 .audio {
+    position: fixed;
+    top: 1vh;
+    right: 1vh;
+    z-index: 2;
+    border-radius: 50%;
     background-color: #fff0dd76;
     color: #000;
     text-align: center;
@@ -794,6 +812,7 @@ div.and {
 
 .audio i {
     align-self: center;
+    padding: 15px;
 }
 
 /* DIVIDER */

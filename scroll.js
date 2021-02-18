@@ -7,6 +7,5 @@ $(document).ready(function(){
         duration: "80%"
     })
     .setClassToggle("#couple-title", "fade-in")
-    .addIndicators()
     .addTo(controller);
 });

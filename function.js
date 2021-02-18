@@ -48,8 +48,10 @@ var aIcon = document.getElementById('audio-icon');
 
 function openLtr(){
     var letter = document.getElementById('letter');
+    var cover = document.getElementById('cover');
     var body = document.querySelector('body');
     letter.classList.add('slide-hide');
+    cover.classList.add('show-cover');
     function scroll(){
         body.style.overflowY = 'scroll';
     }
