@@ -30,16 +30,18 @@
 body {
     font-family: 'Rancho';
     overflow: hidden;
-    transition: 500ms;
 }
 
 /* PRELOADER */
 
 #loader-wrapper {
     position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     z-index: 10;
+    transform: translateY(0);
     background-color: #FFEBCA;
     color: #000;
     display: flex;
@@ -49,7 +51,15 @@ body {
 
 .loaded #loader-wrapper {
     transform: translateY(-100%);
-    transition: 500ms;
+    transition: 500ms ease-in-out;
+}
+
+.main {
+    visibility: hidden;
+}
+
+.loaded .main {
+    visibility: visible;
 }
 
 #loader-wrapper img {
@@ -67,7 +77,7 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     padding: 0 10%;
     z-index: 3;
@@ -76,7 +86,7 @@ body {
     color: #826E52;
     font-family: 'Rancho';
     font-size: 36px;
-    transition: all 500ms;
+    transform: translateY(0);
 }
 
 .letter .column {
@@ -88,6 +98,11 @@ body {
 .letter .column:first-of-type,
 .letter .column:last-of-type {
     padding: 5vh;
+}
+
+.slide-hide {
+    transform: translateY(-100%);
+    transition: 500ms ease-in-out;
 }
 
 #open {
@@ -151,6 +166,9 @@ body {
 .couple-title {
     font-family: 'Damion' !important;
     font-size: 68px;
+    transform: translateY(50px);
+    opacity: 0;
+    transition: 500ms ease-out;
 }
 
 .img-couple {
@@ -159,14 +177,13 @@ body {
     margin: 20px;
     border-radius: 50%;
     object-fit: cover;
-    transition: 500ms;
+    transition: width 500ms, height 500ms, margin 500ms;
 }
 
 .img-couple:hover {
     width: 330px;
     height: 330px;
     margin: 0;
-    transition: 500ms;
 }
 
 .name {
@@ -206,7 +223,6 @@ body {
 
 .socialmedia>a:hover {
     color:  #5a4d3e;
-    transition: 500ms;
 }
 
 .icon {
@@ -351,15 +367,30 @@ div.and {
     color: #FFECCB;
 }
 
-.dress-name {
-    width: 50%;
-    padding: 20px;
+.dress-code .card-body {
+    padding: 0;
+}
+
+.dress-card {
+    max-width: 70vh;
     margin: 0 auto;
     border-radius: 10px;
     background-color: #FFFEFC;
     color: #826E52;
     text-align: center;
     font-size: 52px;
+    line-height: 2;
+}
+
+.dress-card .list-group-item {
+    background-color: unset;
+    border: 0;
+    width: 50%;
+    align-items: center;
+}
+
+.dress-card .list-group-item:first-of-type, .dress-card .list-group-item:last-of-type {
+    width: 25%;
 }
 
 /* HEALTH */
@@ -475,10 +506,10 @@ div.and {
 .img-fluid {
     padding: 1vh;
     border-radius: 1rem;
-    transition: 500ms;}
+    transition: 500ms;
+}
 
 .img-fluid:hover {
-    transition: 500ms;
     transform: scale(1.025);
 }
 
@@ -532,7 +563,6 @@ div.and {
 
 .img-btn:hover {
     background-color: #9f805950;
-    transition: 500ms;
 }
 
 .img-btn>img {
@@ -641,7 +671,6 @@ div.and {
     -ms-transform: scale(1.05);
     -o-transform: scale(1.05);
     -moz-transform: scale(1.05);
-    transition: 500ms;
 }
 
 .btn-rusty {
@@ -652,7 +681,6 @@ div.and {
 
 .btn-rusty:hover {
     background-color: #f5e2c3;
-    transition: 500ms;
 }
 
 .btn-letter {
@@ -668,7 +696,6 @@ div.and {
     color: #826E52;
     border: 5px solid #826E52;
     transform: scale(1.1);
-    transition: 500ms;
 }
 
 /* SCROLL BAR */
@@ -706,14 +733,13 @@ div.and {
     text-align: right;
     border: 0;
     color: #FFFEFC;
-    transition: 500ms;
+    transition: background-color 500ms, color 500ms;
 }
 
 .list-group-item-action:hover {
     background-color: #826E52;
     color: #FFFEFC;
     text-align: left;
-    transition: 500ms;
 }
 
 .list-group-item.active {
@@ -721,13 +747,13 @@ div.and {
     color: #826E52;
     border-left: 0.5rem solid #826E52;
     text-align: left;
-    transition: 500ms;
+    transition: background-color 500ms, color 500ms;
 }
 
 .hp-menu {
     background-color: #00b87876;
-    width: inherit;
     color: #FFFEFC;
+    width: inherit;
     padding: .5rem 0;
     padding-right: 1rem;
     word-wrap: break-word;
@@ -758,7 +784,6 @@ div.and {
 
 .sh-hover:hover {
     box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
-    transition: 500ms;
 }
 
 /*---AUDIO */
@@ -775,7 +800,6 @@ div.and {
     background-color: #fff0dddc;
     color: #000;
     text-align: center;
-    transition: 500ms;
 }
 
 .audio i {
