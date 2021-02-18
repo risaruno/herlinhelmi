@@ -4,7 +4,7 @@ $(document).ready(function(){
     var scene = new ScrollMagic.Scene({
         triggerElement: "#couple-title",
         triggerHook: 0.8,
-        duration: "75%"
+        duration: "80%"
     })
     .setClassToggle("#couple-title", "fade-in")
     .addIndicators()
