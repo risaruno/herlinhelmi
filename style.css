@@ -736,24 +736,25 @@ div.and {
     padding-left: 100px;
     border: 0;
     color: #FFFEFC;
-    transition: background-color .5s, color .5s, padding .5s;
+    transition: all .5s;
 }
 
 .list-group-item-action:hover {
     background-color: #826E52;
     color: #FFFEFC;
+    border-left: 0.5rem solid #826E52;
     text-align: left;
     padding-left: 20px;
-    transition: background-color .5s, color .5s, padding .5s;
+    transition: all .5s;
 }
 
-.list-group-item.active {
+.list-group-item-action.active {
     background-color: #FFECCB;
     color: #826E52;
     border-left: 0.5rem solid #826E52;
     text-align: left;
     padding-left: 20px;
-    transition: background-color .5s, color .5s, padding .5s;
+    transition: all .5s;
 }
 
 .hp-menu {
@@ -761,20 +762,26 @@ div.and {
     color: #FFFEFC;
     width: inherit;
     word-wrap: break-word;
+    line-height: 1;
+}
+
+.hp-menu span {
+    font-size: smaller;
 }
 
 .hp-menu:hover {
     background-color: #00b878;
     color: #FFFEFC;
+    border-left: 0.5rem solid #00af63;
     padding-right: 100px;
 }
 
 .hp-menu.active {
     background-color: #82ffc9;
     color: #00af63;
+    border-left: 0.5rem solid #00af63;
     padding-left: 10px;
     padding-right: 100px;
-    border-left: 0.5rem solid #00af63;
 }
 
 /* CUSTOM SHADOW HOVERING STYLE */
