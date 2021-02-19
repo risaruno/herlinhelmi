@@ -7,5 +7,21 @@ $(document).ready(function(){
         duration: "80%"
     })
     .setClassToggle("#couple-title", "fade-in")
+    //.addIndicators()
     .addTo(controller);
+
+    let i = 1;
+    $('.section').each(function(){
+        var duration = $(this).height();
+        var toggle = '#navbar>a:nth-child('+i+')';
+        console.log(i,duration,toggle);
+        var navbarScene = new ScrollMagic.Scene({
+            triggerElement: this,
+            duration: duration
+        })
+        .setClassToggle(toggle,'active')
+        //.addIndicators()
+        .addTo(controller);
+        i++;
+    })
 });

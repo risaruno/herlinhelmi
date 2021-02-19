@@ -19,7 +19,6 @@
     #open {
         font-size: 24px;
         padding: 10px 30px;
-        margin: 30px;
     }
     
     .names {
@@ -198,17 +197,40 @@
     }
 
     .list-group-item-action, .list-group-item-action:focus, .list-group-item-action:active {
-        padding-left: 70px;
+        width: 95px;
+        margin-left: 55px;
+        border: 0;
+        border-left: 15px solid #826E52;
+        padding: 10px;
     }
 
     .list-group-item-action:hover, .list-group-item.active {
-        padding-left: 10px;
-        padding-right: 70px;
+        width: 140px;
+        margin-left: 0;
+    }
+
+    .hp-menu {
+        width: 95px;
+        border: 0;
+        border-left: 15px solid #00af63;
     }
 
     .hp-menu:hover, .hp-menu.active {
-        padding-left: 10px;
+        border-left: 5px solid #00af63;
         padding-right: 70px;
+    }
+
+    /*---AUDIO */
+
+    .audio i {
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    /* DIVIDER */
+
+    .divider svg {
+        height: 40px;
     }
 
 }

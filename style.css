@@ -732,9 +732,11 @@ div.and {
 .list-group-item-action, .list-group-item-action:focus, .list-group-item-action:active {
     background-color: #9f805900;
     color: #FFFEFC;
-    text-align: left;
-    padding-left: 100px;
+    width: 130px;
+    margin-left: 70px;
     border: 0;
+    border-left: 30px solid #826E52;
+    text-align: left;
     color: #FFFEFC;
     transition: all .5s;
 }
@@ -742,25 +744,25 @@ div.and {
 .list-group-item-action:hover {
     background-color: #826E52;
     color: #FFFEFC;
-    border-left: 0.5rem solid #826E52;
-    text-align: left;
-    padding-left: 20px;
-    transition: all .5s;
+    width: 200px;
+    margin-left: 0;
+    border-left: 10px solid #826E52;
 }
 
 .list-group-item-action.active {
     background-color: #FFECCB;
     color: #826E52;
-    border-left: 0.5rem solid #826E52;
-    text-align: left;
-    padding-left: 20px;
-    transition: all .5s;
+    width: 200px;
+    margin-left: 0;
+    border-left: 10px solid #826E52;
 }
 
 .hp-menu {
     background-color: #00b87800;
     color: #FFFEFC;
-    width: inherit;
+    width: 130px;
+    border: 0;
+    border-left: 30px solid #00af63;
     word-wrap: break-word;
     line-height: 1;
 }
@@ -770,16 +772,16 @@ div.and {
 }
 
 .hp-menu:hover {
-    background-color: #00b878;
+    background-color: #00af63;
     color: #FFFEFC;
-    border-left: 0.5rem solid #00af63;
+    border-left: 10px solid #00af63;
     padding-right: 100px;
 }
 
 .hp-menu.active {
-    background-color: #82ffc9;
-    color: #00af63;
-    border-left: 0.5rem solid #00af63;
+    background-color: #00af63;
+    color: #FFFEFC;
+    border-left: 10px solid #00af63;
     padding-left: 10px;
     padding-right: 100px;
 }
@@ -807,7 +809,6 @@ div.and {
     background-color: #fff0dd76;
     color: #000;
     text-align: center;
-    font-size: 20px;
     transition: 500ms;
 }
 
@@ -819,6 +820,7 @@ div.and {
 
 .audio i {
     align-self: center;
+    font-size: 20px;
     padding: 15px;
 }
 
