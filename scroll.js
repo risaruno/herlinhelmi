@@ -14,7 +14,6 @@ $(document).ready(function(){
     $('.section').each(function(){
         var duration = $(this).height();
         var toggle = '#navbar>a:nth-child('+i+')';
-        console.log(i,duration,toggle);
         var navbarScene = new ScrollMagic.Scene({
             triggerElement: this,
             duration: duration

@@ -191,33 +191,35 @@
     /* CUSTOM SIDEBAR NAV */
 
     .hover-navbar {
-        width: 140px;
-        right: -70px;
-        font-size: 12px;
+        padding: 0;
+        font-size: 10px;
+        height: 9.5vh;
+    }
+
+    .hover-navbar i {
+        font-size: 24px;
     }
 
     .list-group-item-action, .list-group-item-action:focus, .list-group-item-action:active {
-        width: 95px;
-        margin-left: 55px;
-        border: 0;
-        border-left: 15px solid #826E52;
-        padding: 10px;
+        padding: 10px 5px;
+        line-height: 0.5;
     }
 
     .list-group-item-action:hover, .list-group-item.active {
-        width: 140px;
-        margin-left: 0;
+        padding: 5px;
+        border-bottom: 5px solid #826E52;
+    }
+    
+    .hp-menu {
+        line-height: 0.4;
     }
 
-    .hp-menu {
-        width: 95px;
-        border: 0;
-        border-left: 15px solid #00af63;
+    .hp-menu span {
+        line-height: 1.5;
     }
 
     .hp-menu:hover, .hp-menu.active {
-        border-left: 5px solid #00af63;
-        padding-right: 70px;
+        border-bottom: 5px solid #00673a;
     }
 
     /*---AUDIO */

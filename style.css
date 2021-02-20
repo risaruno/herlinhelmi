@@ -27,6 +27,12 @@
     src: url('src/font/Wedding/Flaticon.ttf');
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Rancho';
     overflow: hidden;
@@ -44,9 +50,6 @@ body {
     transform: translateY(0);
     background-color: #FFEBCA;
     color: #000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .loaded #loader-wrapper {
@@ -63,7 +66,11 @@ body {
 }
 
 #loader-wrapper img {
+    position: absolute;
     width: 50vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 }
 
 /* INVITE MESSAGE */
@@ -178,7 +185,6 @@ body {
     font-family: 'Damion' !important;
     font-size: 68px;
     transform: translateY(50px);
-    opacity: 0;
     transition: 500ms ease-out;
 }
 
@@ -292,7 +298,7 @@ div.and {
 .akad-card, .resepsi-card {
     background-color: #FFFEFC;
     border-right: 10px solid #826E52;
-    border-bottom: 10px solid #826E52;
+    border-bottom: 5px solid #826E52;
 }
 
 .card-title {
@@ -324,7 +330,7 @@ div.and {
     padding: 0 20px;
 }
 
-.list-group-flush .card-icon {
+.akad-card .list-icon, .resepsi-card .list-icon {
     display: inline-block;
     width: 20%;
     padding: 10px 0;
@@ -332,7 +338,7 @@ div.and {
     vertical-align: top;
 }
 
-.list-group-flush .card-icon-desc {
+.akad-card .list-icon-desc, .resepsi-card .list-icon-desc {
     display: inline-block;
     width: 78%;
     padding: 10px 0;
@@ -417,7 +423,7 @@ div.and {
 
 .health-card {
     border-right: 10px solid #826E52;
-    border-bottom: 10px solid #826E52;
+    border-bottom: 5px solid #826E52;
 }
 
 .health-card .card-title {
@@ -449,7 +455,7 @@ div.and {
     border: 0;
 }
 
-.list-group-horizontal .card-icon {
+.health-card .list-icon {
     display: inline-block;
     width: 100%;
     padding: 10px 0;
@@ -457,11 +463,11 @@ div.and {
     vertical-align: top;
 }
 
-.list-group-horizontal .card-icon img {
+.health-card .list-icon img {
     width: 40%;
 }
 
-.list-group-horizontal .card-icon-desc {
+.health-card .list-icon-desc {
     font-family: 'Quicksand';
     display: inline-block;
     width: 100%;
@@ -720,51 +726,51 @@ div.and {
 /* CUSTOM SIDEBAR NAV */
 
 .hover-navbar {
+    background-color: #FFECCB;
     font-family: 'Quicksand';
     position: fixed;
-    width: 200px;
-    top: 10vh;
-    right: -100px;
+    width: 100%;
+    height: 10vh;
+    padding: 0 10%;
+    border-radius: 0;
+    bottom: 0;
+    left: 0;
     z-index: 2;
-    font-size: 16px;
+    font-size: 12px;
+}
+
+.hover-navbar i {
+    font-size: 32px;
 }
 
 .list-group-item-action, .list-group-item-action:focus, .list-group-item-action:active {
-    background-color: #9f805900;
-    color: #FFFEFC;
-    width: 130px;
-    margin-left: 70px;
+    background-color: #FFECCB;
+    color: #826E52;
     border: 0;
-    border-left: 30px solid #826E52;
-    text-align: left;
-    color: #FFFEFC;
+    padding: 13px;
+    text-align: center;
+    line-height: 1.1;
     transition: all .5s;
 }
 
 .list-group-item-action:hover {
-    background-color: #826E52;
-    color: #FFFEFC;
-    width: 200px;
-    margin-left: 0;
-    border-left: 10px solid #826E52;
+    background-color: #FFECCB;
+    color: #826E52;
+    padding: 5px 13px;
+    border-bottom: 5px solid #826E52;
 }
 
 .list-group-item-action.active {
     background-color: #FFECCB;
     color: #826E52;
-    width: 200px;
-    margin-left: 0;
-    border-left: 10px solid #826E52;
+    padding: 5px 13px;
+    border-bottom: 5px solid #826E52;
 }
 
 .hp-menu {
-    background-color: #00b87800;
+    background-color: #00af63;
     color: #FFFEFC;
-    width: 130px;
-    border: 0;
-    border-left: 30px solid #00af63;
     word-wrap: break-word;
-    line-height: 1;
 }
 
 .hp-menu span {
@@ -774,16 +780,13 @@ div.and {
 .hp-menu:hover {
     background-color: #00af63;
     color: #FFFEFC;
-    border-left: 10px solid #00af63;
-    padding-right: 100px;
+    border-bottom: 5px solid #00673a;
 }
 
 .hp-menu.active {
     background-color: #00af63;
     color: #FFFEFC;
-    border-left: 10px solid #00af63;
-    padding-left: 10px;
-    padding-right: 100px;
+    border-bottom: 5px solid #00673a;
 }
 
 /* CUSTOM SHADOW HOVERING STYLE */
@@ -842,7 +845,7 @@ div.and {
     position: relative;
     display: block;
     width: 100%;
-    height: 100px;
+    height: 10vh;
     padding: 0;
     margin: 0;
 }
