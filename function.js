@@ -73,3 +73,21 @@ function playAudio(){
     aBtn.setAttribute('onclick', 'stopAudio()');
     aIcon.className = "fas fa-music";
 }
+
+// Screen 768px and up //
+var navbar = document.getElementById('navbar');
+document.addEventListener('DOMContentLoaded', function(event) {
+	if(window.innerWidth>=992) {
+        navbar.classList.remove('list-group-horizontal');
+	} else if(window.innerWidth<992) {
+        navbar.classList.add('list-group-horizontal');
+	}
+});
+
+window.addEventListener("resize", function() {
+	if(window.innerWidth>=992) {
+        navbar.classList.remove('list-group-horizontal');
+	} else if(window.innerWidth<992) {
+        navbar.classList.add('list-group-horizontal');
+	}
+});
