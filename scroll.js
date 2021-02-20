@@ -19,7 +19,7 @@ $(document).ready(function(){
             duration: duration
         })
         .setClassToggle(toggle,'active')
-        .addIndicators()
+        // .addIndicators()
         .addTo(controller);
         i++;
     })
