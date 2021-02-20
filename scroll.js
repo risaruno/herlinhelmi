@@ -7,10 +7,10 @@ $(document).ready(function(){
         duration: "80%"
     })
     .setClassToggle("#couple-title", "fade-in")
-    //.addIndicators()
+    // .addIndicators()
     .addTo(controller);
 
-    let i = 1;
+    var i = 1;
     $('.section').each(function(){
         var duration = $(this).height();
         var toggle = '#navbar>a:nth-child('+i+')';
@@ -19,7 +19,7 @@ $(document).ready(function(){
             duration: duration
         })
         .setClassToggle(toggle,'active')
-        //.addIndicators()
+        .addIndicators()
         .addTo(controller);
         i++;
     })

@@ -74,6 +74,9 @@ function playAudio(){
     aIcon.className = "fas fa-music";
 }
 
+window.addEventListener('focusin', function(){ audio.play(); });
+window.addEventListener('focusout', function(){ audio.pause(); });
+
 // Screen 768px and up //
 var navbar = document.getElementById('navbar');
 document.addEventListener('DOMContentLoaded', function(event) {
