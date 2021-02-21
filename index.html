@@ -28,7 +28,7 @@
                 <div class="row">
                     <div class="column col-lg-12">
                         <p>Kepada Yth,<br>
-                            <span id="guest">Tamu Undangan</span><br>
+                            <span class="guest" id="guest">Tamu Undangan</span><br>
                             di tempat
                         </p>
                         <p>
@@ -301,6 +301,46 @@
                             <img src="src/img/HH_10.jpg" alt="" class="img-fluid">
                         </div>
                     </div>
+                    
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalCarousel">
+                      Launch demo modal
+                    </button>
+                    
+                    <div class="modal fade" id="modalCarousel" tabindex="-1" aria-labelledby="modalCarouselLabel" aria-hidden="true">
+                      <div class="modal-dialog modal-fullscreen">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalCarouselLabel">Gallery</h5>
+                                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div id="carouselInModal" class="carousel slide" data-bs-ride="carousel">
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active" data-bs-interval="100000">
+                                            <img src="src/img/HH_1.jpg" class="d-block w-100" alt="HH_1">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="src/img/HH_2.jpg" class="d-block w-100" alt="HH_2">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="src/img/HH_3.jpg" class="d-block w-100" alt="HH_3">
+                                        </div>
+                                    </div>
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselInModal"  data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#carouselInModal"  data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                    
                 </div>
             </div>
             <div class="row section giftnWish" id="wish">  
@@ -344,8 +384,8 @@
                                     informasi di bawah ini</p>
                                     <div class="giftAccount sh-hover">
                                         Bank BCA<br>
-                                        012341234<br>
-                                        a.n Keluarga
+                                        0083588249<br>
+                                        a.n Herlin Febriyanti
                                     </div>
                                 </div>
                             </div>
@@ -355,15 +395,17 @@
                 <div class="column col-lg-6 wish">
                     <div class="card wish-card sh-hover">
                         <div class="card-header">
-                            Ucapan dan doa untuk kami
+                            Wish and pray
                         </div>
                         <div class="card-body">
                             <form>
                                 <div class="mb-3">
-                                    <input type="text" class="form-control" name="name" placeholder="Nama">
+                                    <label for="name" class="form-label">Nama</label>
+                                    <input type="text" class="form-control guest" name="name" placeholder="Nama">
                                 </div>
                                 <div class="mb-3">
-                                    <textarea class="form-control" name="wish" rows="5" placeholder="Harapan dan doa anda"></textarea>
+                                    <label for="wish" class="form-label">Harapan dan doa</label>
+                                    <textarea class="form-control" name="wish" rows="5" placeholder="Tuliskan harapan dan doa anda untuk kami"></textarea>
                                 </div>
                                 <button type="submit" class="btn btn-rusty">Kirim</button>
                               </form>

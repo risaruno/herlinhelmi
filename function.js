@@ -13,12 +13,15 @@ document.onreadystatechange = function () {
 
 // GUEST NAME
 
-const queryString = window.location.search;
-const urlParams = new URLSearchParams(queryString);
-const guestBox = document.getElementById('guest');
-const guest = urlParams.get('guest');
+var queryString = window.location.search;
+var urlParams = new URLSearchParams(queryString);
+var guestBox = document.querySelectorAll('.guest');
+var guest = urlParams.get('guest');
 if (guest!=null){
-    guestBox.innerText = guest;
+    guestBox.forEach(function(e){
+        e.innerHTML = guest;
+        e.value = guest;
+    })
 }
 
 // PARTY COUNT DOWN //
@@ -66,16 +69,19 @@ function stopAudio(){
     audio.currentTime = 0;
     aBtn.setAttribute('onclick', 'playAudio()');
     aIcon.className = "fas fa-volume-mute";
+
+    window.removeEventListener('focusin', function(){ audio.play(); });
+    window.removeEventListener('focusout', function(){ audio.pause(); });
 }
 
 function playAudio(){
     audio.play();
     aBtn.setAttribute('onclick', 'stopAudio()');
     aIcon.className = "fas fa-music";
-}
 
-window.addEventListener('focusin', function(){ audio.play(); });
-window.addEventListener('focusout', function(){ audio.pause(); });
+    window.addEventListener('focusin', function(){ audio.play(); });
+    window.addEventListener('focusout', function(){ audio.pause(); });
+}
 
 // Screen 768px and up //
 var navbar = document.getElementById('navbar');

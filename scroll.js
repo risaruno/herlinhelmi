@@ -1,7 +1,8 @@
 $(document).ready(function(){
     var controller = new ScrollMagic.Controller();
-    // build scene
-    var scene = new ScrollMagic.Scene({
+    
+    // COUPLETITLE
+    new ScrollMagic.Scene({
         triggerElement: "#couple-title",
         triggerHook: 0.8,
         duration: "80%"
@@ -10,11 +11,12 @@ $(document).ready(function(){
     // .addIndicators()
     .addTo(controller);
 
+    // NAVBAR SECTION
     var i = 1;
     $('.section').each(function(){
         var duration = $(this).height();
         var toggle = '#navbar>a:nth-child('+i+')';
-        var navbarScene = new ScrollMagic.Scene({
+        new ScrollMagic.Scene({
             triggerElement: this,
             duration: duration
         })
@@ -23,4 +25,16 @@ $(document).ready(function(){
         .addTo(controller);
         i++;
     })
+
+    //COVER
+    new ScrollMagic.Scene({
+        triggerElement: "#cover",
+        triggerHook: "onEnter",
+        duration: $('#cover').height()
+    })
+    .setPin()
+    .addIndicators()
+    .addTo(controller);
+
+
 });

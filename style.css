@@ -34,6 +34,7 @@
 }
 
 body {
+    scroll-behavior: smooth;
     font-family: 'Rancho';
     overflow: hidden;
 }
@@ -262,12 +263,10 @@ div.and {
 
 .dDay {
     background-image: url('src/img/HH_BG.jpeg');
-    background-color: #00000050;
-    background-blend-mode: multiply;
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
+    background-attachment: scroll;
+    background-position: scroll;
 
     font-family: 'Rancho';
     font-size: 32px;
@@ -531,6 +530,64 @@ div.and {
     transform: scale(1.025);
 }
 
+#modalCarousel .modal-header {
+    color: #FFF;
+    border: 0;
+}
+
+#modalCarousel .modal-dialog {
+    width: 100%;
+}
+
+#modalCarousel .modal-content {
+    background-color: #00000016;
+    color: #FFF;
+}
+
+#modalCarousel .modal-body {
+    overflow: hidden;
+    padding: 0;
+    margin: 0 10% 10% 10%;
+}
+
+#carouselInModal {
+    height: 100%;
+}
+
+#carouselInModal .carousel-inner {
+    width: 100%;
+    height: 100%;
+    padding: 0 10%;
+}
+
+#carouselInModal .carousel-item {
+    height: 100%;
+    opacity: 1;
+}
+
+#carouselInModal .carousel-item img {
+    object-fit: contain;
+    height: 100%;
+}
+
+#carouselInModal button {
+    background-color: transparent;
+    border: 0;
+    width: 10%;   
+}
+
+#carouselInModal .active.carousel-item-end {
+    transform: translateX(100%);
+    opacity: 0;
+    transition: opacity .6s ease-in-out, transform .6s ease-in-out;
+}
+
+#carouselInModal .active.carousel-item-start {
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: opacity .6s ease-in-out, transform .6s ease-in-out;
+}
+
 /* PRAY */
 
 .pray .row-title {
@@ -557,6 +614,11 @@ div.and {
     background-color: #FFECCB;
     color: #826E52;
     font-family: 'Quicksand';
+}
+
+#gift-modal .modal-content {
+    background-color: #FFECCB;
+    border-radius: 20px;
 }
 
 .gift {
@@ -644,11 +706,6 @@ div.and {
 }
 
 .card {
-    border-radius: 20px;
-}
-
-.modal-dialog .modal-content {
-    background-color: #FFECCB;
     border-radius: 20px;
 }
 
@@ -772,11 +829,11 @@ div.and {
 }
 
 .hp-menu {
-    background-color: #00af63;
+    background-color: #01c26e;
     color: #FFFEFC;
     width: 130px;
     border: 0;
-    border-left: 30px solid #00673a;
+    border-left: 30px solid #00af63;
     word-wrap: break-word;
     line-height: 1;
 }
@@ -786,17 +843,17 @@ div.and {
 }
 
 .hp-menu:hover {
-    background-color: #00af63;
+    background-color: #01c26e;
     color: #FFFEFC;
-    border-left: 10px solid #00673a;
+    border-left: 10px solid #00af63;
     padding-left: 10px;
     padding-right: 120px;
 }
 
 .hp-menu.active {
-    background-color: #00af63;
+    background-color: #01c26e;
     color: #FFFEFC;
-    border-left: 10px solid #00673a;
+    border-left: 10px solid #00af63;
     padding-left: 10px;
     padding-right: 120px;
 }
@@ -881,6 +938,10 @@ div.and {
 .divider-top.wish-d .shape-fill {
     fill: #FFF;
 }
+
+/* MODAL & CAROUSEL*/
+
+
 
 /* FOOTER */
 

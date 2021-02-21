@@ -238,7 +238,7 @@
     }
     
     .hp-menu {
-        background-color: #00af63;
+        background-color: #01c26e;
         color: #FFFEFC;
         line-height: 0.4;
     }
@@ -248,9 +248,9 @@
     }
 
     .hp-menu:hover, .hp-menu.active {
-        background-color: #00af63;
+        background-color: #01c26e;
         color: #FFFEFC;
-        border-bottom: 5px solid #00673a;
+        border-bottom: 5px solid #00af63;
     }
 
     /*---AUDIO */
