@@ -15,10 +15,6 @@
     src: url('src/font/Quicksand-Regular.ttf');
 }
 @font-face {
-    font-family: 'Socialmedia';
-    src: url('src/font/Socialmedia/Flaticon.ttf');
-}
-@font-face {
     font-family: 'Support';
     src: url('src/font/Support/Flaticon.ttf');
 }
@@ -108,9 +104,13 @@ body {
     padding: 5vh;
 }
 
-.slide-hide {
+.slide {
     transform: translateY(-100%);
     transition: 500ms ease-in-out;
+}
+
+.hide {
+    display: none;
 }
 
 #open {
@@ -152,7 +152,7 @@ body {
 
 .cover-couple {
     font-size: 82px;
-    line-height: 1;
+    line-height: 1.2;
 }
 
 .cover>.column {
@@ -186,7 +186,6 @@ body {
     font-family: 'Damion' !important;
     font-size: 68px;
     transform: translateY(50px);
-    transition: 500ms ease-out;
 }
 
 .img-couple {
@@ -263,10 +262,12 @@ div.and {
 
 .dDay {
     background-image: url('src/img/HH_BG.jpeg');
+    background-color: #00000039;
+    background-blend-mode: overlay;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: scroll;
-    background-position: scroll;
+    background-position: center;
 
     font-family: 'Rancho';
     font-size: 32px;
@@ -412,6 +413,7 @@ div.and {
 /* HEALTH */
 
 .health {
+    background-color: #FFF;
     font-family: 'Quicksand';
     display: flex;
     justify-content: center;
@@ -428,7 +430,7 @@ div.and {
 .health-card .card-title {
     font-family: 'Quicksand';
     color: black;
-    font-size: 92px;
+    font-size: 92px ;
     font-weight: bolder;
     padding: 20px;
     line-height: 2;
@@ -474,12 +476,12 @@ div.and {
     word-wrap: normal;
 }
 
-.card-footer {
+.health-card .card-footer {
     background-color: #FFF;
     font-size: 12px;
 }
 
-.card-footer a {
+.health-card .card-footer a {
     color: black;
     font-weight: bold;
     text-decoration: none;
@@ -507,6 +509,10 @@ div.and {
 
 /* GALLERY */
 
+.gallery {
+    background-image: linear-gradient(to bottom,#FFF 0%, #B5927E 100%);
+}
+
 .gallery-title {
     color: #000;
 }
@@ -528,64 +534,6 @@ div.and {
 
 .img-fluid:hover {
     transform: scale(1.025);
-}
-
-#modalCarousel .modal-header {
-    color: #FFF;
-    border: 0;
-}
-
-#modalCarousel .modal-dialog {
-    width: 100%;
-}
-
-#modalCarousel .modal-content {
-    background-color: #00000016;
-    color: #FFF;
-}
-
-#modalCarousel .modal-body {
-    overflow: hidden;
-    padding: 0;
-    margin: 0 10% 10% 10%;
-}
-
-#carouselInModal {
-    height: 100%;
-}
-
-#carouselInModal .carousel-inner {
-    width: 100%;
-    height: 100%;
-    padding: 0 10%;
-}
-
-#carouselInModal .carousel-item {
-    height: 100%;
-    opacity: 1;
-}
-
-#carouselInModal .carousel-item img {
-    object-fit: contain;
-    height: 100%;
-}
-
-#carouselInModal button {
-    background-color: transparent;
-    border: 0;
-    width: 10%;   
-}
-
-#carouselInModal .active.carousel-item-end {
-    transform: translateX(100%);
-    opacity: 0;
-    transition: opacity .6s ease-in-out, transform .6s ease-in-out;
-}
-
-#carouselInModal .active.carousel-item-start {
-    transform: translateX(-100%);
-    opacity: 0;
-    transition: opacity .6s ease-in-out, transform .6s ease-in-out;
 }
 
 /* PRAY */
@@ -614,6 +562,7 @@ div.and {
     background-color: #FFECCB;
     color: #826E52;
     font-family: 'Quicksand';
+    font-size: 20px;
 }
 
 #gift-modal .modal-content {
@@ -628,6 +577,7 @@ div.and {
 
 .gift>* {
     text-align: center;
+    font-weight: bold;
 }
 
 .img-btn {
@@ -664,9 +614,46 @@ div.and {
     color: #826E52;
 }
 
+.after-form {
+    text-align: center;
+    padding: 10vh 0;
+}
+
+.form-success i {
+    color: #48ff63;
+    padding: 10px;
+}
+
+.form-fail i {
+    color: #ff4848;
+    padding: 10px;
+}
+
+.btn-ref {
+    background-color: #FFF;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.btn-ref small {
+    font-size: small;
+}
+
+.btn-ref small i {
+    color: #7ad3ff;
+}
+
+.wish-form>.spinner-border{
+    margin: 10vh 0;
+}
+
 /* THANK YOU */
 
 .thank-you {
+    text-align: center;
+}
+
+.thank-you>div {
     font-size: 36px;
     padding: 20vh 10vh;
 }
@@ -714,10 +701,6 @@ div.and {
     font-size: 92px;
     text-align: center;
     text-shadow: 2px 3px #45454584;
-}
-
-.icon-sm {
-    font-family: 'Socialmedia';
 }
 
 .icon-sp {
@@ -772,6 +755,10 @@ div.and {
     color: #826E52;
     border: 5px solid #826E52;
     transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    -moz-transform: scale(1.1);
 }
 
 /* SCROLL BAR */
@@ -908,6 +895,10 @@ div.and {
 
 .divider-bottom {
     transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
 }
 
 .divider svg {
@@ -936,17 +927,13 @@ div.and {
 }
 
 .divider-top.wish-d .shape-fill {
-    fill: #FFF;
+    fill: #B5927E;
 }
-
-/* MODAL & CAROUSEL*/
-
-
 
 /* FOOTER */
 
 footer {
-    background-image: linear-gradient(to right, #00FFC9 0%, #004E8D 100%);
+    background-image: linear-gradient(to right, #00C4CC 0%, #4CD6B4 100%);
     color: #FFF;
     font-family: 'Quicksand';
     font-weight: bolder;
@@ -965,7 +952,25 @@ footer img {
 }
 
 @keyframes risaruno {
-    0% {transform: rotate(0deg);}
-    50% {transform: rotate(-20deg);}
-    100% {transform: rotate(0);}
+    0% {
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(-20deg);
+        -webkit-transform: rotate(-20deg);
+        -ms-transform: rotate(-20deg);
+        -o-transform: rotate(-20deg);
+        -moz-transform: rotate(-20deg);
+    }
+    100% {
+        transform: rotate(0);
+        -webkit-transform: rotate(0);
+        -ms-transform: rotate(0);
+        -o-transform: rotate(0);
+        -moz-transform: rotate(0);
+    }
 }

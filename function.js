@@ -4,7 +4,8 @@ document.onreadystatechange = function () {
 
         // PRELOADING PAGE
     
-        setInterval(function(){
+        setTimeout(function(){
+            window.scrollTo(0,0);
             document.getElementsByTagName('body')[0].className = 'loaded';
         }, 3000);
 
@@ -22,6 +23,25 @@ if (guest!=null){
         e.innerHTML = guest;
         e.value = guest;
     })
+}
+
+// OPEN INVITATION LETTER BUTTON //
+
+function openLtr(){
+    var letter = document.getElementById('letter');
+    var cover = document.getElementById('cover');
+    var body = document.querySelector('body');
+    function scroll(){
+        letter.classList.add('slide');
+        cover.classList.add('show-cover');
+        body.style.overflowY = 'scroll';
+    }
+    function hide(){
+        letter.classList.add('hide');
+    }
+    setTimeout(scroll, 0);
+    setTimeout(hide, 500);
+    playAudio();
 }
 
 // PARTY COUNT DOWN //
@@ -43,44 +63,23 @@ var x = setInterval(function(){
 
 }, 1000);
 
+// AUDIO CONTROL //
+
 var audio = document.getElementById('audio');
 var aBtn = document.getElementById('audio-btn');
 var aIcon = document.getElementById('audio-icon');
 
-// OPEN INVITATION LETTER BUTTON //
-
-function openLtr(){
-    var letter = document.getElementById('letter');
-    var cover = document.getElementById('cover');
-    var body = document.querySelector('body');
-    letter.classList.add('slide-hide');
-    cover.classList.add('show-cover');
-    function scroll(){
-        body.style.overflowY = 'scroll';
-    }
-    setTimeout(scroll, 500);
+function playAudio(){
     audio.play();
+    aBtn.setAttribute('onclick', 'stopAudio()');
+    aIcon.className = "fas fa-music";
 }
-
-// AUDIO CONTROL //
 
 function stopAudio(){
     audio.pause();
     audio.currentTime = 0;
     aBtn.setAttribute('onclick', 'playAudio()');
     aIcon.className = "fas fa-volume-mute";
-
-    window.removeEventListener('focusin', function(){ audio.play(); });
-    window.removeEventListener('focusout', function(){ audio.pause(); });
-}
-
-function playAudio(){
-    audio.play();
-    aBtn.setAttribute('onclick', 'stopAudio()');
-    aIcon.className = "fas fa-music";
-
-    window.addEventListener('focusin', function(){ audio.play(); });
-    window.addEventListener('focusout', function(){ audio.pause(); });
 }
 
 // Screen 768px and up //
