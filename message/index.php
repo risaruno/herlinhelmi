@@ -25,10 +25,11 @@
                                 dataType: "JSON",
                                 success: function(datas){
                                     var data = datas.data;
+                                    var html="";
                                     $.each(data, function(i, data){
-                                        var html = "<div class='card m-card sh-hover'><div class='card-body'><h5 class='card-title'>"+ data.name +" :</h5><p class='card-text'>"+ data.message +"</p><h6 class='card-subtitle mb-2 text-muted'>"+ data.time +"</h6></div></div>";
-                                        $("#messages").html(html);
+                                        html += "<div class='card m-card sh-hover'><div class='card-body'><h5 class='card-title'>"+ data.name +" :</h5><p class='card-text'>"+ data.message +"</p><h6 class='card-subtitle mb-2 text-muted'>"+ data.time +"</h6></div></div>";
                                     });
+                                    $("#messages").html(html);
                                 }
                             });
                         }

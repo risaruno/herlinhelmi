@@ -1,15 +1,7 @@
  <?php
-$host = "localhost";
-$user = "root";
-$pass = "";
-$db = "herlinhelmi";
+include '../connection/connection.php';
 
-$con = mysqli_connect($host, $user, $pass, $db);
-if (!$con) {
-    die("Connection failed: " . mysqli_connect_error());
-}
-
-$query = "select * from message order by id desc";
+$query = "SELECT * FROM `message` ORDER BY id DESC";
 $result = mysqli_query($con, $query);
 
 if(mysqli_num_rows($result) > 0 ){
@@ -27,3 +19,5 @@ if(mysqli_num_rows($result) > 0 ){
     $data["error"]="Tidak ada data";
     echo json_encode($data);
 }
+
+mysqli_close($con);

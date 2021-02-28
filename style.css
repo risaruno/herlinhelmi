@@ -413,7 +413,7 @@ div.and {
 /* HEALTH */
 
 .health {
-    background-color: #FFF;
+    background-image: linear-gradient(to bottom,#FFECCB 0%, #B5927E 100%);
     font-family: 'Quicksand';
     display: flex;
     justify-content: center;
@@ -922,7 +922,7 @@ div.and {
     fill: #FFECCB;
 }
 
-.divider-bottom.dDay-d .shape-fill {
+.divider-bottom.health-d .shape-fill {
     fill: #FFF;
 }
 
